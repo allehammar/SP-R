@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Phone view */
+body {
+  height: 100vh;
+  background-color: hotpink;
+}
+
+/* Tablet view */
+@media (min-width: 768px) {
+  body {
+    background-color: var(--base-colorFive);
+  }
+}
+
+/* Desktop view */
+@media (min-width: 1024px) {
+  body {
+    background-color: burlywood;
+  }
+}
