@@ -14,4 +14,12 @@
   --signature-colorOne: #a5b9a9;
   --signature-colorOne: #c6d1cd;
   --signature-colorOne: #e4e5e9;
+
+  --space-sm: 12px;
+  --space-md: 24px;
+  --space-lg: 32px;
+  --space-xl: 56px;
+  --space-xxl: 120px;
+
+  --radius: 20px;
 }
