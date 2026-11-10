@@ -9,7 +9,12 @@ require_once __DIR__ . '/header.php';
 
 
 <main>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur praesentium nesciunt nobis maiores. Corrupti nobis assumenda delectus nisi. Quo suscipit impedit eius. Cumque, explicabo omnis. Error vitae libero veniam quam.</p>
+  <div class="heros">
+    <div class="hero">
+      <h1>Upptäck</h1>
+    </div>
+
+  </div>
 </main>
 <footer>
   <p>Testing footer.</p>

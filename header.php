@@ -22,15 +22,28 @@ $title = 'SPÅR';
     <!--accessability, when press tab, jump to main content-->
     <a class="skipLink" href="#main">Skip to content</a>
     <!--Three divs, parent and childs. A tag with link to about page-->
-    <div>
-        <div>
-            <header>
-                <nav>
-                    <a href="about.php">About</a>
-                </nav>
-            </header>
+    <header class="siteHeaders">
+        <div class="siteHeader">
+            <a href="/" class="logo">SPÅR</a>
+            <div class="headerAction">
+                <button type="button" aria-label="Varukorg">
+                    varukorg?
+                </button>
+
+                <button type="button" aria-label="Konto">
+                    konto?
+                </button>
+            </div>
+            <nav class="navigation" aria-label="Huvudnavigation">
+                <button type="button" aria-label="öppnaMeny">
+                    hamburgarmeny?
+                </button>
+
+                <button type="button" aria-label="sök">
+                    sökikon?
+                </button>
+            </nav>
         </div>
-        <div>
-            <h1><?php echo $title ?></h1>
-        </div>
-    </div>
+        <a href="about.php">About</a>
+    </header>
+    <h1><?php echo $title ?></h1>
