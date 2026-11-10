@@ -1,0 +1,17 @@
+body {
+  margin: 0px;
+}
+
+h3 {
+  margin: 0px;
+}
+
+.cardUtvecklatFörDig {
+  background: #cfcfcf;
+  color: white;
+  min-width: 375px;
+  min-height: 317px;
+  display: block;
+  text-align: center;
+  gap: 100px;
+}
