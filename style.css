@@ -1,11 +1,79 @@
+/*
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+*/
+
+/* Lagt in variabler tillsvidare innan vi har knytit ihop css filerna */
+:root {
+  --base-colorOne: #fafafa;
+  --base-colorTwo: #dfdede;
+  --base-colorThree: #b6b6b6;
+  --base-colorFour: #777c80;
+  --base-colorFive: #3d3e3e;
+  --base-colorSix: #111111;
+
+  --signature-colorOne: #213b4c;
+  --signature-colorOne: #647c85;
+  --signature-colorOne: #e2edf1;
+  --signature-colorOne: #c3b5d0;
+  --signature-colorOne: #193531;
+  --signature-colorOne: #a5b9a9;
+  --signature-colorOne: #c6d1cd;
+  --signature-colorOne: #e4e5e9;
+
+  --space-sm: 12px;
+  --space-ss: 16px;
+  --space-md: 24px;
+  --space-lg: 32px;
+  --space-xl: 56px;
+  --space-xxl: 120px;
+
+  --radius: 20px;
+}
+
 * {
   box-sizing: border-box;
 }
 
 /* Phone view */
 body {
+  margin: 0;
   height: 100vh;
   background-color: hotpink;
+}
+
+/* Header Mobile view */
+.siteHeaders {
+  padding: var(--space-ss);
+  background-color: var(--base-colorThree);
+}
+
+.siteHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: var(--base-colorOne);
+  text-decoration: none;
+  letter-spacing: 8px;
+}
+
+.headerAction {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.navigation {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-ss);
 }
 
 /* Tablet view */
