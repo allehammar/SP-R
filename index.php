@@ -15,6 +15,24 @@ require_once __DIR__ . '/header.php';
     </div>
 
   </div>
+
+  <div class="cards">
+    <div class="cardUtvecklatFörDig">
+      <h3>UTVECKLAT FÖR DIG</h3>
+      <h2>
+        Ett funktionellt tillbehör som förenar en välbekant form med ett nytt
+        syfte. Med integrerade solceller för portabel laddning.
+      </h2>
+      <h3>LÄS MER OM AVANCERAD TEKNIK</h3>
+    </div>
+  </div>
+  <form action="">
+    <label for="Email">
+      Email:
+      <input type="text" />
+    </label>
+    <button>Subscribe</button>
+  </form>
 </main>
 <footer>
   <p>Testing footer.</p>
