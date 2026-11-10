@@ -47,6 +47,10 @@ body {
   background-color: hotpink;
 }
 
+h3 {
+  margin: 0px;
+}
+
 /* Header Mobile view */
 .siteHeaders {
   padding: var(--space-ss);
@@ -74,6 +78,16 @@ body {
   display: flex;
   gap: var(--space-sm);
   margin-top: var(--space-ss);
+}
+
+.cardUtvecklatFörDig {
+  background: #cfcfcf;
+  color: white;
+  min-width: 375px;
+  min-height: 317px;
+  display: block;
+  text-align: center;
+  gap: 100px;
 }
 
 /* Tablet view */
