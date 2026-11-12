@@ -25,7 +25,7 @@ $title = 'About Page';
     </div>
     <!---->
     <div>
-        <p>The team has together built a website</p>
+        <p>Text about the team</p>
     </div>
     </div>
 </body>
