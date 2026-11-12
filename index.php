@@ -53,6 +53,34 @@ require_once __DIR__ . '/header.php';
     <div class="box c"></div>
     <div class="box d"></div>
   </div>
+
+  <div class="sustainabilities">
+    <div class="sustainabilityHeading">
+      <p>SPÅRS HÅLLBARHET</p>
+      <h2>Hållbarhet i varje detalj</h2>
+    </div>
+
+    <div class="sustainabilityNumbers">
+      <div class="number">
+        <p>ÅTERVUNNET MATERIAL</p>
+        <h3>80%</h3>
+        <a href="">LÄS MER</a>
+      </div>
+
+      <div class="number">
+        <p>MINDRE KOLDIOXIDUTSLÄPP JÄMFÖRT MED 2022</p>
+        <h3>30%</h3>
+        <a href="">LÄS MER</a>
+      </div>
+
+      <div class="number">
+        <p>REPERATIONER VARJE ÅR</p>
+        <h3>12 000</h3>
+        <a href="">LÄS MER</a>
+      </div>
+    </div>
+  </div>
+
   <form action="">
     <label for="Email">
       Email:
