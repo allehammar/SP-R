@@ -223,6 +223,44 @@ h3 {
   display: none;
 }
 
+/*--------------------------
+GreyboxThree                  
+----------------------------*/
+.sustainabilities {
+  padding: var(--space-ss);
+  background-color: var(--base-colorThree);
+  text-align: center;
+  color: var(--base-colorOne);
+}
+
+.sustainabilities a {
+  color: var(--base-colorOne);
+}
+
+.sustainabilityNumbers {
+  flex-direction: column;
+  display: flex;
+  gap: 48px;
+}
+
+.number {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+/*.number p,
+.number a,
+.number h2,
+.number h3 {
+  color: var(--base-colorOne);
+}
+
+.sustainabilityHeading p,
+.sustainabilityHeading h2 {
+  color: var(--base-colorOne);
+} */
+
 /* Tablet view */
 @media (min-width: 768px) {
   body {
@@ -230,8 +268,13 @@ h3 {
   }
 }
 
-/* Desktop view */
+/*======================== 
+Desktop view 
+==========================*/
 @media (min-width: 1024px) {
+  /*--------------------------
+  GreyboxOne                 
+  ----------------------------*/
   .siteHeaders {
     display: block;
     position: relative;
@@ -283,5 +326,23 @@ h3 {
 
   .productList {
     grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  /*--------------------------
+  GreyboxThree                  
+  ----------------------------*/
+  .sustainabilities {
+    padding: 64px var(--space-lg);
+  }
+
+  .sustainabilityNumbers {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--space-lg);
+  }
+
+  .sustainabilityHeading {
+    margin-bottom: 48px;
   }
 }

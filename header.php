@@ -33,20 +33,20 @@ $title = 'SPÅR';
         <div class="headerIcons">
             <nav class="navigation" aria-label="Huvudnavigation">
                 <button class="menuButton" type="button" aria-label="öppnaMeny">
-                    <img src="/assets,products,img,collection/hamburger.svg" alt="hamburgermenu">
+                    <img src="/assets/hamburger.svg" alt="hamburgermenu">
                 </button>
 
                 <button type="button" aria-label="sök">
-                    <img src="/assets,products,img,collection/search.svg" alt="search">
+                    <img src="/assets/search.svg" alt="search">
                 </button>
             </nav>
             <div class="headerAction">
                 <button type="button" aria-label="Varukorg">
-                    <img src="/assets,products,img,collection/shopping.svg" alt="shoppingCart">
+                    <img src="/assets/shopping.svg" alt="shoppingCart">
                 </button>
 
                 <button type="button" aria-label="Konto">
-                    <img src="/assets,products,img,collection/user.svg" alt="user">
+                    <img src="/assets/user.svg" alt="user">
                 </button>
             </div>
 
