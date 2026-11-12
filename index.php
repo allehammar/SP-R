@@ -11,10 +11,31 @@ require_once __DIR__ . '/header.php';
 <main>
   <div class="heros">
     <div class="hero">
-      <h1>Upptäck</h1>
+      <h1>Upptäck nya möjligheter</h1>
+      <a href="#collection">Se kollektion</a>
     </div>
-
   </div>
+
+  <div class="products" id="collection">
+    <div class="productList">
+      <article class="productCard">
+        <div class="productImage"></div>
+        <h2>Karbinladdare</h2>
+      </article>
+
+      <article class="productCard">
+        <div class="productImage"></div>
+        <h2>Skor</h2>
+      </article>
+
+      <article class="productCard">
+        <div class="productImage"></div>
+        <h2>Vattenflaska</h2>
+      </article>
+    </div>
+    <p>Karusell</p>
+  </div>
+
 
   <div class="cards">
     <div class="cardUtvecklatFörDig">

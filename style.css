@@ -18,13 +18,13 @@
   --base-colorSix: #111111;
 
   --signature-colorOne: #213b4c;
-  --signature-colorOne: #647c85;
-  --signature-colorOne: #e2edf1;
-  --signature-colorOne: #c3b5d0;
-  --signature-colorOne: #193531;
-  --signature-colorOne: #a5b9a9;
-  --signature-colorOne: #c6d1cd;
-  --signature-colorOne: #e4e5e9;
+  --signature-colorTwo: #647c85;
+  --signature-colorThree: #e2edf1;
+  --signature-colorFour: #c3b5d0;
+  --signature-colorFive: #193531;
+  --signature-colorSix: #a5b9a9;
+  --signature-colorSeven: #c6d1cd;
+  --signature-colorEight: #e4e5e9;
 
   --space-sm: 12px;
   --space-ss: 16px;
@@ -42,11 +42,14 @@
 
 /* Phone view */
 body {
+  /* Removes default body margin */
   margin: 0;
+  /* body's height to viewport height */
   height: 100vh;
   background-color: rgb(101, 236, 28);
 }
 
+/* Removes default margins h3 */
 h3 {
   margin: 0px;
 }
@@ -59,25 +62,67 @@ h3 {
 
 .siteHeader {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
+/* SPÅR logo, specs like figma */
 .logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 343px;
+  height: 62px;
+  font-size: 48px;
+  font-weight: 200;
   color: var(--base-colorOne);
   text-decoration: none;
-  letter-spacing: 8px;
+}
+
+.headerIcons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--space-ss);
 }
 
 .headerAction {
   display: flex;
-  gap: var(--space-sm);
+  align-items: center;
+  gap: 8px;
 }
 
 .navigation {
   display: flex;
-  gap: var(--space-sm);
-  margin-top: var(--space-ss);
+  gap: 8px;
+  margin-top: 0;
+  align-items: center;
+}
+
+.headerIcons button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.headerIcons img {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.headerIcons img {
+  width: var(--space-md);
+  height: var(--space-md);
+  display: block;
 }
 
 .cardUtvecklatFörDig {
@@ -90,6 +135,53 @@ h3 {
   gap: 100px;
 }
 
+.heros {
+  min-height: 350px;
+  background-color: var(--base-colorThree);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: var(--space-md);
+}
+
+.hero {
+  text-align: center;
+}
+
+.products {
+  padding: 8px;
+  background-color: var(--base-colorOne);
+}
+
+.productList {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  padding: 8px;
+}
+
+.productImage {
+  width: 100%;
+  aspect-ratio: 1;
+  background-color: #cfcfcf;
+}
+
+.productCard h2 {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.hero h1 {
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 500;
+  text-align: center;
+}
+
+.desktopNavigation {
+  display: none;
+}
+
 /* Tablet view */
 @media (min-width: 768px) {
   body {
@@ -99,7 +191,56 @@ h3 {
 
 /* Desktop view */
 @media (min-width: 1024px) {
-  body {
-    background-color: burlywood;
+  .siteHeaders {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding: 24px 32px 16px;
+  }
+
+  .siteHeader {
+    display: flex;
+    justify-content: center;
+  }
+
+  .logo {
+    max-width: 100%;
+    width: 260px;
+    font-size: 32px;
+  }
+
+  .headerIcons {
+    display: flex;
+    width: auto;
+    position: absolute;
+    top: 24px;
+    left: 32px;
+    right: 32px;
+    margin-top: 0;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* .headerIcons makes it have higher specificity to enable to override the mobile display:flex */
+  .headerIcons .menuButton {
+    display: none;
+  }
+
+  .desktopNavigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    margin-top: 20px;
+  }
+
+  .desktopNavigation a {
+    color: var(--base-colorOne);
+    text-decoration: none;
+    font-size: 12px;
+  }
+
+  .productList {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 }

@@ -19,31 +19,46 @@ $title = 'SPÅR';
 </head>
 
 <body>
-    <!--accessability, when press tab, jump to main content-->
-    <a class="skipLink" href="#main">Skip to content</a>
+
     <!--Three divs, parent and childs. A tag with link to about page-->
     <header class="siteHeaders">
         <div class="siteHeader">
-            <a href="/" class="logo">SPÅR</a>
-            <div class="headerAction">
-                <button type="button" aria-label="Varukorg">
-                    varukorg?
-                </button>
-
-                <button type="button" aria-label="Konto">
-                    konto?
-                </button>
-            </div>
+            <a href="/" class="logo" aria-label="startsida">
+                <span aria-hidden="true">S</span>
+                <span aria-hidden="true">P</span>
+                <span aria-hidden="true">Å</span>
+                <span aria-hidden="true">R</span>
+            </a>
+        </div>
+        <div class="headerIcons">
             <nav class="navigation" aria-label="Huvudnavigation">
-                <button type="button" aria-label="öppnaMeny">
-                    hamburgarmeny?
+                <button class="menuButton" type="button" aria-label="öppnaMeny">
+                    <img src="/assets,products,img,collection/hamburger.svg" alt="hamburgermenu">
                 </button>
 
                 <button type="button" aria-label="sök">
-                    sökikon?
+                    <img src="/assets,products,img,collection/search.svg" alt="search">
                 </button>
             </nav>
+            <div class="headerAction">
+                <button type="button" aria-label="Varukorg">
+                    <img src="/assets,products,img,collection/shopping.svg" alt="shoppingCart">
+                </button>
+
+                <button type="button" aria-label="Konto">
+                    <img src="/assets,products,img,collection/user.svg" alt="user">
+                </button>
+            </div>
+
         </div>
-        <a href="about.php">About</a>
+        <nav class="desktopNavigation" aria-label="Produktkategorier">
+            <a href="#nyheter">NYHETER</a>
+            <a href="accessoarer">ACCESSOARER</a>
+            <a href="skor">SKOR</a>
+            <a href="kläder">KLÄDER</a>
+            <a href="teknik">TEKNIK</a>
+            <a href="gåvor">GÅVOR</a>
+        </nav>
+
+        <!--<a href="about.php">About</a>-->
     </header>
-    <h1><?php echo $title ?></h1>
