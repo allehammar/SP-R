@@ -44,7 +44,7 @@
 body {
   margin: 0;
   height: 100vh;
-  background-color: rgb(101, 236, 28);
+  background-color: var(--base-colorOne);
 }
 
 h3 {
@@ -79,7 +79,15 @@ h3 {
   gap: var(--space-sm);
   margin-top: var(--space-ss);
 }
+.cardUtvecklatFörDig h3 {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
 
+.cardUtvecklatFörDig h2 {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
 .cardUtvecklatFörDig {
   background: #cfcfcf;
   color: white;
@@ -87,7 +95,40 @@ h3 {
   min-height: 317px;
   display: block;
   text-align: center;
-  gap: 100px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1.6fr;
+  grid-template-rows: 112px 112px;
+  grid-template-areas:
+    "a a d"
+    "b c d";
+  gap: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  background: #fafafa;
+}
+
+.box {
+  background: #d0d0d0;
+}
+
+.a {
+  grid-area: a;
+}
+.b {
+  grid-area: b;
+}
+.c {
+  grid-area: c;
+}
+.d {
+  grid-area: d;
 }
 
 /* Tablet view */

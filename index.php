@@ -23,8 +23,14 @@ require_once __DIR__ . '/header.php';
         Ett funktionellt tillbehör som förenar en välbekant form med ett nytt
         syfte. Med integrerade solceller för portabel laddning.
       </h2>
-      <h3>LÄS MER OM AVANCERAD TEKNIK</h3>
+      <h3><a href="">LÄS MER OM AVANCERAD TEKNIK</a></h3>
     </div>
+  </div>
+  <div class="grid">
+    <div class="box a"></div>
+    <div class="box b"></div>
+    <div class="box c"></div>
+    <div class="box d"></div>
   </div>
   <form action="">
     <label for="Email">
