@@ -52,20 +52,6 @@ require_once __DIR__ . '/header.php';
     <div class="box d"></div>
   </div>
 
-  <div class="naturen">
-    <p class="label">SPÅR OUTDOOR-KOLLEKTION</p>
-    <h1 class="heading-2">För naturen.<br>Med unik design.</h1>
-  </div>
-  <div class="naturenGrid">
-    <div class="box a"></div>
-    <div class="box b"></div>
-  </div>
-
-  <div class="inbjudan">
-    <div class="inbjudanGrid">
-      <div class="box a"></div>
-      <div class="box b"></div>
-      <div class="box c"></div>
   <div class="sustainabilities">
     <div class="sustainabilityHeading">
       <p>SPÅRS HÅLLBARHET</p>
@@ -91,6 +77,15 @@ require_once __DIR__ . '/header.php';
         <a href="">LÄS MER</a>
       </div>
     </div>
+  </div>
+
+  <div class="naturen">
+    <p class="label">SPÅR OUTDOOR-KOLLEKTION</p>
+    <h1 class="heading-2">För naturen.<br>Med unik design.</h1>
+  </div>
+  <div class="naturenGrid">
+    <div class="box a"></div>
+    <div class="box b"></div>
   </div>
 
   <div class="configurators">
@@ -136,6 +131,16 @@ require_once __DIR__ . '/header.php';
       </div>
     </div>
   </div>
+
+  <div class="inbjudan">
+    <div class="inbjudanGrid">
+      <div class="box a"></div>
+      <div class="box b"></div>
+      <div class="box c"></div>
+    </div>
+  </div>
+
+
 
   <form action="">
     <label for="Email">
