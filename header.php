@@ -16,6 +16,9 @@ $title = 'SPÅR';
     <meta property="og:description" content="Landing page design collection." />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="variables.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@200;300;400&display=swap" rel="stylesheet">
 </head>
 
 <body>
