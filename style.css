@@ -34,10 +34,32 @@
   --space-xxl: 120px;
 
   --radius: 20px;
+
+  /* Font */
+  --font-family: "DM Sans", sans-serif;
+
+  /* Vikter */
+  --font-weight-extralight: 200;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+
+  /* Storlekar */
+  --font-size-logo: 64px;
+  --font-size-h1: 48px;
+  --font-size-h2: 24px;
+  --font-size-button: 24px;
+  --font-size-nav: 16px;
+  --font-size-label: 16px;
+  --font-size-body: 16px;
+
+  /* Övrigt */
+  --letter-spacing-logo: 1.2em;
+  --line-height-auto: normal;
 }
 
 * {
   box-sizing: border-box;
+  font-family: var(--font-family);
 }
 
 /* Phone view */
@@ -52,6 +74,56 @@ body {
 /* Removes default margins h3 */
 h3 {
   margin: 0px;
+}
+
+.logo-2 {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-extralight);
+  font-size: var(--font-size-logo);
+  letter-spacing: var(--letter-spacing-logo);
+  text-transform: uppercase;
+}
+
+.heading-1 {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-auto);
+}
+
+.heading-2 {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-auto);
+}
+
+.button-text {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-light);
+  font-size: var(--font-size-button);
+  text-transform: uppercase;
+}
+
+.nav-link {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-nav);
+  text-transform: uppercase;
+}
+
+.label {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-light);
+  font-size: var(--font-size-label);
+  text-transform: uppercase;
+}
+
+.body-text {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-light);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-auto);
 }
 
 /* Header Mobile view */
@@ -221,6 +293,46 @@ h3 {
 
 .desktopNavigation {
   display: none;
+}
+
+.naturen p {
+}
+
+.naturen {
+  padding: 0px;
+  background-color: var(--base-colorOne);
+  display: block;
+  text-align: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.naturenGrid {
+  display: grid;
+  grid-template-areas:
+    "a"
+    "b";
+  grid-template-rows: 237px 237px;
+  gap: 16px;
+}
+
+.inbjudan {
+  padding: 0px;
+  background-color: var(--base-colorOne);
+  display: block;
+  text-align: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.inbjudanGrid {
+  display: grid;
+  grid-template-areas:
+    "a"
+    "b"
+    "c";
+  grid-template-rows: 158px 158px 158px;
+  gap: 48px;
 }
 
 /* Tablet view */
