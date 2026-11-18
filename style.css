@@ -261,6 +261,95 @@ GreyboxThree
   color: var(--base-colorOne);
 } */
 
+/*--------------------------
+GreyboxFive                  
+----------------------------*/
+.configurators {
+  background-color: var(--base-colorOne);
+  width: 100%;
+  padding: var(--space-ss);
+}
+
+.configuratorInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  padding: 24px 16px;
+}
+
+.configuratorInfoEtiquette {
+  font-size: 10px;
+  margin: 0;
+}
+
+.configuratorInfoDescription h3 {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.configuratorLink {
+  text-align: center;
+  padding: 16px;
+}
+
+.configuratorLink a {
+  color: var(--base-colorSix);
+  font-size: 12px;
+}
+
+.configuratorTools {
+  display: flex;
+  flex-direction: column;
+}
+
+.configurator3D {
+  min-height: 350px;
+  width: 100%;
+  background-color: var(--base-colorTwo);
+}
+
+.configuratorChoices {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-ss) 8px;
+}
+
+.productChoiceNameText p {
+  font-size: 12px;
+  margin: 0;
+}
+
+.productChoiceColor {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.colorOne,
+.colorTwo,
+.colorThree {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--base-colorThree);
+}
+
+.colorOne {
+  background-color: var(--base-colorTwo);
+}
+
+.colorTwo {
+  background-color: var(--base-colorThree);
+}
+
+.colorThree {
+  background-color: var(--base-colorFour);
+}
+
 /* Tablet view */
 @media (min-width: 768px) {
   body {

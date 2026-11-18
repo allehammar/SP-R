@@ -81,6 +81,50 @@ require_once __DIR__ . '/header.php';
     </div>
   </div>
 
+  <div class="configurators">
+    <div class="configuratorInfo">
+      <div class="configuratorInfoEtiquette">
+        <p>UPPTÄCK VARJE DETALJ</p>
+      </div>
+
+      <div class="configuratorInfoDescription">
+        <h3>Utforska samspelet mellan form, material och funktion. Se produkten från alla vinklar och upptäck detaljerna som gör skillnaden.</h3>
+      </div>
+    </div>
+
+    <div class="configuratorLink">
+      <a href="">UPPLEV KOLLEKTIONEN</a>
+    </div>
+
+    <div class="configuratorTools">
+      <div class="configurator3D">
+
+      </div>
+
+      <div class="configuratorChoices">
+        <div class="productChoiceName">
+          <div class="productChoiceNameText">
+            <p>SKOR</p>
+          </div>
+        </div>
+
+        <div class="productChoiceColor">
+          <div class="colorOne">
+
+          </div>
+
+          <div class="colorTwo">
+
+          </div>
+
+          <div class="colorThree">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <form action="">
     <label for="Email">
       Email:
