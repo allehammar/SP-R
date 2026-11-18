@@ -66,6 +66,74 @@ require_once __DIR__ . '/header.php';
       <div class="box a"></div>
       <div class="box b"></div>
       <div class="box c"></div>
+  <div class="sustainabilities">
+    <div class="sustainabilityHeading">
+      <p>SPÅRS HÅLLBARHET</p>
+      <h2>Hållbarhet i varje detalj</h2>
+    </div>
+
+    <div class="sustainabilityNumbers">
+      <div class="number">
+        <p>ÅTERVUNNET MATERIAL</p>
+        <h3>80%</h3>
+        <a href="">LÄS MER</a>
+      </div>
+
+      <div class="number">
+        <p>MINDRE KOLDIOXIDUTSLÄPP JÄMFÖRT MED 2022</p>
+        <h3>30%</h3>
+        <a href="">LÄS MER</a>
+      </div>
+
+      <div class="number">
+        <p>REPERATIONER VARJE ÅR</p>
+        <h3>12 000</h3>
+        <a href="">LÄS MER</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="configurators">
+    <div class="configuratorInfo">
+      <div class="configuratorInfoEtiquette">
+        <p>UPPTÄCK VARJE DETALJ</p>
+      </div>
+
+      <div class="configuratorInfoDescription">
+        <h3>Utforska samspelet mellan form, material och funktion. Se produkten från alla vinklar och upptäck detaljerna som gör skillnaden.</h3>
+      </div>
+    </div>
+
+    <div class="configuratorLink">
+      <a href="">UPPLEV KOLLEKTIONEN</a>
+    </div>
+
+    <div class="configuratorTools">
+      <div class="configurator3D">
+
+      </div>
+
+      <div class="configuratorChoices">
+        <div class="productChoiceName">
+          <div class="productChoiceNameText">
+            <p>SKOR</p>
+          </div>
+        </div>
+
+        <div class="productChoiceColor">
+          <div class="colorOne">
+
+          </div>
+
+          <div class="colorTwo">
+
+          </div>
+
+          <div class="colorThree">
+
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
