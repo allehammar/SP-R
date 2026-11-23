@@ -139,9 +139,8 @@ h3 {
   width: 100%;
 }
 
-/* SPÅR logo, specs like figma */
 .logo {
-  display: flex;
+  /*display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -150,7 +149,17 @@ h3 {
   font-size: 48px;
   font-weight: 200;
   color: var(--base-colorOne);
-  text-decoration: none;
+  text-decoration: none;*/
+  display: block;
+  max-width: 100%;
+  width: 260px;
+  transition: width 0.3s ease;
+}
+
+.logo img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .headerIcons {
@@ -186,15 +195,12 @@ h3 {
 }
 
 .headerIcons img {
-  width: 24px;
-  height: 24px;
-  display: block;
-}
-
-.headerIcons img {
   width: var(--space-md);
   height: var(--space-md);
   display: block;
+  transition:
+    height 0.3s ease,
+    width 0.3s ease;
 }
 .cardUtvecklatFörDig h3 {
   margin-top: 32px;
@@ -255,6 +261,10 @@ h3 {
   justify-content: center;
   align-items: flex-end;
   padding: var(--space-md);
+  background-image: url("/assets/hero.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .hero {
@@ -262,15 +272,19 @@ h3 {
 }
 
 .products {
-  padding: 8px;
+  padding: var(--space-ss);
   background-color: var(--base-colorOne);
 }
 
 .productList {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: nowrap;
   gap: 8px;
-  padding: 8px;
+  width: 100%;
+  /* be able to scroll down */
+  overflow-x: auto;
+  /* be able to scroll right */
+  scroll-snap-type: x mandatory;
 }
 
 .productImage {
@@ -279,9 +293,29 @@ h3 {
   background-color: #cfcfcf;
 }
 
+.productCard {
+  /* at mobile view, show three boxes/products */
+  flex: 0 0 calc((100% - 16px) / 3);
+  min-width: 0;
+  scroll-snap-align: start;
+}
+
 .productCard h2 {
   font-size: 12px;
   font-weight: 400;
+}
+
+.productList::-webkit-scrollbar {
+  height: 3px;
+}
+
+.productList::-webkit-scrollbar-track {
+  background-color: var(--base-colorTwo);
+}
+
+.productList::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--base-colorFive);
 }
 
 .hero h1 {
@@ -359,18 +393,6 @@ GreyboxThree
   display: flex;
   align-items: center;
 }
-
-/*.number p,
-.number a,
-.number h2,
-.number h3 {
-  color: var(--base-colorOne);
-}
-
-.sustainabilityHeading p,
-.sustainabilityHeading h2 {
-  color: var(--base-colorOne);
-} */
 
 /*--------------------------
 GreyboxFive                  
@@ -461,6 +483,135 @@ GreyboxFive
   background-color: var(--base-colorFour);
 }
 
+.mobileMenu {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--base-colorOne);
+  padding: var(--space-ss);
+  /* control the layers so the hamburger menu is on top */
+  z-index: 1000;
+  /* to be able to scroll down from the mobilemenu to be to able to reach other sections when the menu is opened */
+  overflow-y: auto;
+  /* move the menu outside the seeable screen of the website, to be able to later slide it in */
+  transform: translateX(-100%);
+  /* slide the menu in and out */
+  transition:
+    0.3s ease-in-out,
+    visibility 0.3s;
+  visibility: hidden;
+}
+
+.mobileMenu.active {
+  display: flex;
+  flex-direction: column;
+  transform: translateX(0);
+  visibility: visible;
+}
+
+.mobileMenuTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: var(--space-ss);
+}
+
+.mobileMenuLogo {
+  color: var(--base-colorFive);
+  font-weight: 200;
+  letter-spacing: 8px;
+  font-size: 18px;
+}
+
+.mobileMenuActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mobileMenuTop button {
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  min-width: 32px;
+  min-height: 32px;
+}
+
+.closeMenuButton {
+  font-size: 28px;
+}
+
+.mobileMenuActions img {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.mobileMenuSearch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 0;
+  border-top: 1px solid var(--base-colorTwo);
+  border-bottom: 1px solid var(--base-colorTwo);
+}
+
+.mobileMenuSearch img {
+  width: 20px;
+  height: 20px;
+}
+
+.mobileMenuSearch button {
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  min-width: 32px;
+  min-height: 32px;
+}
+
+.mobileMenuLinks {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 0;
+}
+
+.mobileMenuLinks a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: var(--base-colorSix);
+  padding: 16px 8px;
+  font-size: 12px;
+}
+
+.mobileMenuLinks div {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.mobileMenuBottom {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  border-top: 1px solid var(--base-colorTwo);
+  padding: 24px 8px;
+}
+
+.mobileMenuBottom a {
+  text-decoration: none;
+  color: var(--base-colorFive);
+  font-size: 12px;
+}
+
+.megaMenu {
+  display: none;
+}
+
 /* Tablet view */
 @media (min-width: 768px) {
   body {
@@ -477,9 +628,31 @@ Desktop view
   ----------------------------*/
   .siteHeaders {
     display: block;
-    position: relative;
     width: 100%;
     padding: 24px 32px 16px;
+    /*position: sticky;*/
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    transition:
+      padding 0.3s ease,
+      background-color 0.3s ease;
+  }
+
+  .siteHeaders:hover {
+    background-color: var(--base-colorOne);
+  }
+
+  .siteHeaders:hover .logo {
+    color: var(--base-colorSix);
+    transition: color 0.3s ease-in-out;
+  }
+
+  .siteHeaders:hover .desktopNavigation a {
+    color: var(--base-colorSix);
+    transition: color 0.3s ease-in-out;
   }
 
   .siteHeader {
@@ -491,6 +664,35 @@ Desktop view
     max-width: 100%;
     width: 260px;
     font-size: 32px;
+    transition:
+      width 0.3s ease,
+      font-size 0.3s ease;
+  }
+
+  .logo img {
+    transition: filter 0.3s ease;
+  }
+
+  .siteHeaders:hover .logo img,
+  .siteHeaders:focus-within .logo img,
+  .siteHeaders.scrolling-up .logo img {
+    filter: brightness(0);
+  }
+
+  .siteHeaders.is-scrolled {
+    padding: 12px var(--space-lg) 8px;
+  }
+
+  .siteHeaders.is-scrolled .logo {
+    width: 190px;
+  }
+
+  .siteHeaders.scrolling-up {
+    background-color: var(--base-colorOne);
+  }
+
+  .siteHeaders.scrolling-up .desktopNavigation a {
+    color: var(--base-colorSix);
   }
 
   .headerIcons {
@@ -503,6 +705,43 @@ Desktop view
     margin-top: 0;
     justify-content: space-between;
     align-items: center;
+    transition: top 0.3s ease;
+  }
+
+  .headerIcons button {
+    transition:
+      width 0.3s ease,
+      height 0.3s ease,
+      padding 0.3s ease;
+  }
+
+  .siteHeaders.is-scrolled .headerIcons {
+    top: 12px;
+  }
+
+  .siteHeaders.is-scrolled .headerIcons button {
+    height: var(--space-lg);
+    width: var(--space-lg);
+    padding: 4px;
+  }
+
+  .siteHeaders.is-scrolled .headerIcons img {
+    height: 20px;
+    width: 20px;
+  }
+
+  .siteHeaders.is-scrolled .desktopNavigation {
+    gap: var(--space-md);
+    margin-top: 12px;
+  }
+
+  .siteHeaders.is-scrolled .desktopNavigation a {
+    font-size: 10px;
+    padding: 6px 8px;
+  }
+
+  .siteHeaders.is-scrolled .megaMenu {
+    top: calc(100% - 8px);
   }
 
   /* .headerIcons makes it have higher specificity to enable to override the mobile display:flex */
@@ -516,6 +755,9 @@ Desktop view
     align-items: center;
     gap: 32px;
     margin-top: 20px;
+    transition:
+      gap 0.3s ease,
+      margin-top 0.3s ease;
   }
 
   .desktopNavigation a {
@@ -524,8 +766,9 @@ Desktop view
     font-size: 12px;
   }
 
-  .productList {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+  .productCard {
+    /* at desktop view, show seven boxes/products */
+    flex-basis: calc((100% - 48px) / 7);
   }
 
   /*--------------------------
@@ -544,5 +787,192 @@ Desktop view
 
   .sustainabilityHeading {
     margin-bottom: 48px;
+  }
+
+  /*--------------------------
+  GreyboxFive                 
+  ----------------------------*/
+  .configurators {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 48px;
+    gap: 48px;
+  }
+
+  .configuratorTools,
+  .configuratorText {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .configuratorText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .configuratorInfo {
+    padding: 0;
+  }
+
+  .configuratorLink {
+    border: 0;
+    padding: 0;
+  }
+
+  .configurator3D {
+    min-height: 450px;
+  }
+
+  .megaMenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    top: calc(100% - 16px);
+    gap: var(--space-lg);
+    padding: var(--space-lg);
+    background-color: var(--base-colorOne);
+  }
+
+  .megaMenuLinks {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-ss);
+    flex: 1;
+  }
+
+  .megaMenuLinks a {
+    color: var(--base-colorSix);
+    text-decoration: none;
+    font-size: 12px;
+  }
+
+  .megaMenuCard {
+    flex: 2;
+    min-width: 0;
+  }
+
+  .megaMenuImage {
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    background-color: var(--base-colorThree);
+  }
+
+  .megaMenuCard p {
+    font-size: 12px;
+    margin-top: 8px;
+  }
+
+  .siteHeaders:has(.desktopNavigation a[href="#nyheter"]:hover) #newsMenu,
+  .siteHeaders:has(.desktopNavigation a[href="#nyheter"]:focus-visible)
+    #newsMenu,
+  #newsMenu:hover,
+  #newsMenu:focus-within {
+    display: flex;
+  }
+
+  .megaMenuLinkBoxes {
+    display: flex;
+    flex: 1.5;
+    gap: var(--space-md);
+    min-width: 0;
+  }
+
+  .megaMenuLinkBoxes .megaMenuLinks {
+    flex: 1;
+  }
+
+  .megaMenuLinks p {
+    font-size: var(--space-sm);
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .siteHeaders:has(.desktopNavigation a[href="#accessoarer"]:hover)
+    #accessoriesMenu,
+  .siteHeaders:has(.desktopNavigation a[href="#accessoarer"]:focus-visible)
+    #accessoriesMenu,
+  #accessoriesMenu:hover,
+  #accessoriesMenu:focus-within {
+    display: flex;
+  }
+
+  .siteHeaders:has(.desktopNavigation a[href="#skor"]:hover) #shoesMenu,
+  .siteHeaders:has(.desktopNavigation a[href="#skor"]:focus-visible) #shoesMenu,
+  #shoesMenu:hover,
+  #shoesMenu:focus-within {
+    display: flex;
+  }
+
+  .siteHeaders:has(.desktopNavigation a[href="#kläder"]:hover) #clothesMenu,
+  .siteHeaders:has(.desktopNavigation a[href="#kläder"]:focus-visible)
+    #clothesMenu,
+  #clothesMenu:hover,
+  #clothesMenu:focus-within {
+    display: flex;
+  }
+
+  .siteHeaders:has(.desktopNavigation a[href="#teknik"]:hover) #techMenu,
+  .siteHeaders:has(.desktopNavigation a[href="#teknik"]:focus-visible)
+    #techMenu,
+  #techMenu:hover,
+  #techMenu:focus-within {
+    display: flex;
+  }
+
+  .siteHeaders:has(.desktopNavigation a[href="#gåvor"]:hover) #giftsMenu,
+  .siteHeaders:has(.desktopNavigation a[href="#gåvor"]:focus-visible)
+    #giftsMenu,
+  #giftsMenu:hover,
+  #giftsMenu:focus-within {
+    display: flex;
+  }
+
+  .desktopNavigation a {
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+    padding: 8px 12px;
+  }
+
+  .desktopNavigation a:hover,
+  .desktopNavigation a:focus-visible {
+    border-bottom-color: var(--base-colorSix);
+  }
+
+  .siteHeaders:has(#newsMenu:hover) .desktopNavigation a[href="#nyheter"],
+  .siteHeaders:has(#accessoriesMenu:hover)
+    .desktopNavigation
+    a[href="#accessoarer"],
+  .siteHeaders:has(#shoesMenu:hover) .desktopNavigation a[href="#skor"],
+  .siteHeaders:has(#clothesMenu:hover) .desktopNavigation a[href="#kläder"],
+  .siteHeaders:has(#techMenu:hover) .desktopNavigation a[href="#teknik"],
+  .siteHeaders:has(#giftsMenu:hover) .desktopNavigation a[href="#gåvor"] {
+    border-bottom-color: var(--base-colorSix);
+  }
+
+  .heros {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 100vh;
+    padding: 24px 24px 8vh;
+    background-position: center;
+  }
+
+  .hero {
+    min-height: 100vh;
+    background-position: center;
+    text-align: center;
+  }
+
+  .hero h1,
+  .hero a {
+    color: var(--base-colorOne);
   }
 }
