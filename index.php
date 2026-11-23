@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-//Fetch data from the different arrays
 require_once __DIR__ . '/header.php';
 
 ?>
@@ -20,20 +19,48 @@ require_once __DIR__ . '/header.php';
     <div class="productList">
       <article class="productCard">
         <div class="productImage"></div>
-        <h2>Karbinladdare</h2>
+        <h2>KARBINLADDARE</h2>
       </article>
 
       <article class="productCard">
         <div class="productImage"></div>
-        <h2>Skor</h2>
+        <h2>SKOR</h2>
       </article>
 
       <article class="productCard">
         <div class="productImage"></div>
-        <h2>Vattenflaska</h2>
+        <h2>VATTENFLASKA</h2>
       </article>
+
+      <article class="productCard">
+        <div class="productImage"></div>
+        <h2>HOODIE</h2>
+      </article>
+
+      <article class="productCard">
+        <div class="productImage"></div>
+        <h2>JACKA</h2>
+      </article>
+
+      <article class="productCard">
+        <div class="productImage"></div>
+        <h2>SOLGLASÖGON</h2>
+      </article>
+
+      <article class="productCard">
+        <div class="productImage"></div>
+        <h2>DIGITAL KLOCKA</h2>
+      </article>
+
+      <article class="productCard">
+        <div class="productImage"></div>
+        <h2>HANDSKAR</h2>
+      </article>
+
+      <article class="productCard">
+        <div class="productImage"></div>
+        <h2>MÖSSA</h2>
     </div>
-    <p>Karusell</p>
   </div>
 
   <div class="cardUtvecklatFörDig">
@@ -89,18 +116,20 @@ require_once __DIR__ . '/header.php';
   </div>
 
   <div class="configurators">
-    <div class="configuratorInfo">
-      <div class="configuratorInfoEtiquette">
-        <p>UPPTÄCK VARJE DETALJ</p>
+    <div class="configuratorText">
+      <div class="configuratorInfo">
+        <div class="configuratorInfoEtiquette">
+          <p>UPPTÄCK VARJE DETALJ</p>
+        </div>
+
+        <div class="configuratorInfoDescription">
+          <h3>Utforska samspelet mellan form, material och funktion. Se produkten från alla vinklar och upptäck detaljerna som gör skillnaden.</h3>
+        </div>
       </div>
 
-      <div class="configuratorInfoDescription">
-        <h3>Utforska samspelet mellan form, material och funktion. Se produkten från alla vinklar och upptäck detaljerna som gör skillnaden.</h3>
+      <div class="configuratorLink">
+        <a href="">UPPLEV KOLLEKTIONEN</a>
       </div>
-    </div>
-
-    <div class="configuratorLink">
-      <a href="">UPPLEV KOLLEKTIONEN</a>
     </div>
 
     <div class="configuratorTools">
@@ -130,6 +159,7 @@ require_once __DIR__ . '/header.php';
         </div>
       </div>
     </div>
+
   </div>
 
   <div class="inbjudan">
