@@ -164,13 +164,31 @@ require_once __DIR__ . '/header.php';
 
   <div class="inbjudan">
     <div class="inbjudanGrid">
-      <div class="box a"></div>
-      <div class="box b"></div>
-      <div class="box c"></div>
+      <div>
+        <img src="assets/infinity.svg" alt="">
+        <p class="label">LIVSTIDSGARANTI</p>
+        <h2 class="heading-2">Täcker funktionsfel på produkten.</h2>
+        <a href="" class="nav-link"> UPPTÄCK</a>
+      </div>
+      <div>
+        <img src="assets/arrow.svg" alt="">
+        <p class="label">KOSTNADSFRI RETUR</p>
+        <h3 class="heading-2">30 dagars öppet köp.</h3>
+        <a href="" class="nav-link">UPPTÄCK</a>
+      </div>
+      <div>
+        <img src="assets/truck.svg" alt="">
+        <p class="label">KOSTNADSFRI LEVERANS</p>
+        <h3 class="heading-2">Levereras utan extra kostnad.</h3>
+        <a href="" class="nav-link">UPPTÄCK</a>
+      </div>
+      <div class="inbjudanText">
+        <p>en inbjudan</p>
+        <p>Oregelbundna notiser om nya kollektioner, utomhusberättelser och annat värt att veta.</p>
+        <button>håll dig uppdaterad</button>
+      </div>
     </div>
   </div>
-
-
 
   <form action="">
     <label for="Email">
@@ -181,10 +199,28 @@ require_once __DIR__ . '/header.php';
   </form>
 </main>
 <footer>
-  <p>Testing footer.</p>
-  <a href="https://www.facebook.com/">Facebook</a>
-  <a href="https://www.instagram.com/">Instagram</a>
-  <a href="https://www.tiktok.com/">Tiktok</a>
+  <div class="accordion">
+    <details>
+      <summary>Kontakt</summary>
+      <div class="content">
+        <p>Mejla oss på info@spar.se</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Om oss</summary>
+      <div class="content">
+        <p>Text om företaget.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Kundservice</summary>
+      <div class="content">
+        <p>Frågor om köp, retur och leverans.</p>
+      </div>
+    </details>
+  </div>
 </footer>
 </body>
 

@@ -329,9 +329,6 @@ h3 {
   display: none;
 }
 
-.naturen p {
-}
-
 .naturen {
   padding: 0px;
   background-color: var(--base-colorOne);
@@ -342,32 +339,57 @@ h3 {
 }
 
 .naturenGrid {
-  display: grid;
-  grid-template-areas:
-    "a"
-    "b";
-  grid-template-rows: 237px 237px;
-  gap: 16px;
+  display: flex;
+  width: auto;
+  height: 237px;
+  background-color: var(--base-colorTwo);
+  display: flex;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .inbjudan {
-  padding: 0px;
-  background-color: var(--base-colorOne);
-  display: block;
+  padding: var(--space-ss);
+  background-color: var(--base-colorTwo);
   text-align: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  color: var(--base-colorOne);
 }
 
 .inbjudanGrid {
-  display: grid;
-  grid-template-areas:
-    "a"
-    "b"
-    "c";
-  grid-template-rows: 158px 158px 158px;
+  flex-direction: column;
+  display: flex;
   gap: 48px;
 }
+.inbjudanText {
+  margin-top: 64px;
+  padding: 0 20px;
+}
+
+.accordion details {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.accordion summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px;
+  cursor: pointer;
+  list-style: none;
+  text-transform: uppercase;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-light);
+  font-size: var(--font-size-nav);
+}
+.accordion summary::after {
+  content: "+";
+  font-size: 28px;
+  font-weight: var(--font-weight-light);
+}
+.accordion .content {
+  padding: 0 10px 20px;
+}
+
 /*--------------------------
 GreyboxThree                  
 ----------------------------*/
@@ -616,6 +638,14 @@ GreyboxFive
 @media (min-width: 768px) {
   body {
     background-color: var(--base-colorFive);
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 280px 280px;
+    gap: 32px;
+    padding: 5% 2%;
+    margin: 0 auto;
   }
 }
 
@@ -974,5 +1004,25 @@ Desktop view
   .hero h1,
   .hero a {
     color: var(--base-colorOne);
+  }
+
+  .inbjudan {
+    background-color: var(--base-colorTwo);
+    text-align: center;
+    padding: 32px 0;
+  }
+
+  .inbjudanGrid {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenlys;
+    gap: var(--space-lg);
+  }
+
+  .inbjudanText {
+    margin-top: 96px;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
