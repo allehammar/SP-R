@@ -57,10 +57,7 @@ body {
   margin: 0;
   /* body's height to viewport height */
   min-height: 100vh;
-  background-image: url("assets/Bakgrund.png");
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
+  background-color: var(--base-colorOne);
 }
 
 /* Removes default margins h3 */
