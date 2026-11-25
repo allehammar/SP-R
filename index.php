@@ -105,14 +105,14 @@ if (isset($_POST['email'])) {
 
       <article class="productCard">
         <div class="productImage">
-          <img src="/assets/Mössa_Blå.png" alt="Mössa">
+          <img src="/assets/Mossa_Bla.png" alt="Mössa">
         </div>
         <h2>MÖSSA</h2>
       </article>
 
       <article class="productCard">
         <div class="productImage">
-          <img src="/assets/Ryggsäck_Blå_45grader.png" alt="Ryggsäck">
+          <img src="/assets/Ryggsack_Bla_45grader.png" alt="Ryggsäck">
         </div>
         <h2>RYGGSÄCK</h2>
       </article>
