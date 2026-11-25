@@ -1,9 +1,3 @@
-<?php
-//Define variable for title later used with echo
-$title = 'SPÅR';
-
-?>
-
 <!doctype html>
 <html lang="en">
 
@@ -15,7 +9,6 @@ $title = 'SPÅR';
     <meta property="og:title" content="This is my article page" />
     <meta property="og:description" content="Landing page design collection." />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="variables.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@200;300;400&display=swap" rel="stylesheet">
@@ -309,5 +302,4 @@ $title = 'SPÅR';
                 <a href="#kontakt">KONTAKT</a>
             </div>
         </div>
-        <!--<a href="about.php">About</a>-->
     </header>
