@@ -71,12 +71,16 @@ $title = 'SPÅR';
             </div>
 
             <div class="megaMenuCard">
-                <div class="megaMenuImage"></div>
+                <div class="megaMenuImage">
+                    <img src="/assets/MENY-01-nyheter-friluftskollektion_930x332.jpg" alt="Friluftskollektionen">
+                </div>
                 <p>FRILUFTSKOLLEKTION</p>
             </div>
 
             <div class="megaMenuCard">
-                <div class="megaMenuImage"></div>
+                <div class="megaMenuImage">
+                    <img src="/assets/MENY-02-nyheter-sasongens-favoriter_1146x332.jpg" alt="Säsongens favoriter">
+                </div>
                 <p>SÄSONGENS FAVORITER</p>
             </div>
 
@@ -104,12 +108,16 @@ $title = 'SPÅR';
             </div>
 
             <div class="megaMenuCard">
-                <div class="megaMenuImage"></div>
+                <div class="megaMenuImage">
+                    <img src="/assets/MENY-03-accessoarer-mossor_930x332.jpg" alt="Mössor">
+                </div>
                 <p>MÖSSOR</p>
             </div>
 
             <div class="megaMenuCard">
-                <div class="megaMenuImage"></div>
+                <div class="megaMenuImage">
+                    <img src="/assets/MENY-04-accessoarer-glasogon_928x332.jpg" alt="Glasögon">
+                </div>
                 <p>GLASÖGON</p>
             </div>
 
@@ -137,12 +145,16 @@ $title = 'SPÅR';
             </div>
 
             <div class="megaMenuCard">
-                <div class="megaMenuImage"></div>
+                <div class="megaMenuImage">
+                    <img src="/assets/MENY-05-skor-1_684x332.jpg" alt="Sko ett">
+                </div>
                 <p>SKOR</p>
             </div>
 
             <div class="megaMenuCard">
-                <div class="megaMenuImage"></div>
+                <div class="megaMenuImage">
+                    <img src="/assets/MENY-06-skor-2_1196x332.jpg" alt="Sko två">
+                </div>
                 <p>SKOR</p>
             </div>
         </div>
@@ -169,12 +181,16 @@ $title = 'SPÅR';
             </div>
 
             <div class="megaMenuCard">
-                <div class="megaMenuImage"></div>
+                <div class="megaMenuImage">
+                    <img src="/assets/MENY-07-klader-jackor_996x332.jpg" alt="Jackor">
+                </div>
                 <p>JACKOR</p>
             </div>
 
             <div class="megaMenuCard">
-                <div class="megaMenuImage"></div>
+                <div class="megaMenuImage">
+                    <img src="/assets/MENY-08-klader-byxor_884x332.jpg" alt="Byxor">
+                </div>
                 <p>BYXOR</p>
             </div>
 
@@ -202,12 +218,16 @@ $title = 'SPÅR';
             </div>
 
             <div class="megaMenuCard">
-                <div class="megaMenuImage"></div>
+                <div class="megaMenuImage">
+                    <img src="/assets/MENY-09-teknik-goretex_930x332.jpg" alt="Goretex">
+                </div>
                 <p>GORE-TEX</p>
             </div>
 
             <div class="megaMenuCard">
-                <div class="megaMenuImage"></div>
+                <div class="megaMenuImage">
+                    <img src="/assets/MENY-10-teknik-skotselrad_1000x332.jpg" alt="Skötselråd">
+                </div>
                 <p>SKÖTSELRÅD</p>
             </div>
 
@@ -234,12 +254,16 @@ $title = 'SPÅR';
             </div>
 
             <div class="megaMenuCard">
-                <div class="megaMenuImage"></div>
+                <div class="megaMenuImage">
+                    <img src="/assets/MENY-11-gavor-julklappar_930x332.jpg" alt="Julklappar">
+                </div>
                 <p>JULKLAPPAR</p>
             </div>
 
             <div class="megaMenuCard">
-                <div class="megaMenuImage"></div>
+                <div class="megaMenuImage">
+                    <img src="/assets/MENY-12-gavor-presentkort_984x332.jpg" alt="Presentkort">
+                </div>
                 <p>PRESENTKORT</p>
             </div>
 
