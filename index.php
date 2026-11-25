@@ -4,6 +4,19 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/header.php';
 
+$message = '';
+
+if (isset($_POST['email'])) {
+  $email = trim($_POST['email']);
+
+  if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    $message = 'Tack! Du är nu anmäld.';
+  } else {
+    $message = 'Ogiltig e-postadress, försök igen.';
+  }
+}
+
+
 ?>
 
 
@@ -108,11 +121,11 @@ require_once __DIR__ . '/header.php';
 
   <div class="cardUtvecklatFörDig">
     <h3>UTVECKLAT FÖR DIG</h3>
-    <h2>
+    <h2 class="heading-1">
       Ett funktionellt tillbehör som förenar en välbekant form med ett nytt
       syfte. Med integrerade solceller för portabel laddning.
     </h2>
-    <h3><a href="">LÄS MER OM AVANCERAD TEKNIK</a></h3>
+    <a href="">LÄS MER OM AVANCERAD TEKNIK</a>
   </div>
 
   <div class="grid">
@@ -154,9 +167,10 @@ require_once __DIR__ . '/header.php';
     <h1 class="heading-2">För naturen.<br>Med unik design.</h1>
   </div>
   <div class="naturenGrid">
-    <div class="box a"></div>
-    <div class="box b"></div>
+    <div class="naturenBox1"></div>
+    <div class="naturenBox2"></div>
   </div>
+
 
   <div class="configurators">
     <div class="configuratorText">
@@ -242,43 +256,57 @@ require_once __DIR__ . '/header.php';
         <a href="" class="nav-link">UPPTÄCK</a>
       </div>
       <div class="inbjudanText">
-        <p>en inbjudan</p>
-        <p>Oregelbundna notiser om nya kollektioner, utomhusberättelser och annat värt att veta.</p>
-        <button>håll dig uppdaterad</button>
+        <p>En inbjudan</p>
+        <h3>Oregelbundna notiser om nya kollektioner, utomhusberättelser och annat värt att veta.</h3>
+        <form class="newsletter" action="#" method="post">
+          <label for="email" class=""></label>
+          <input type="email" id="email" name="email" placeholder="Din e-postadress" required>
+          <button type="submit">Håll dig uppdaterad</button>
+        </form>
+        <?php if ($message !== ''): ?>
+          <p><?= htmlspecialchars($message) ?></p>
+        <?php endif; ?>
       </div>
     </div>
-  </div>
 
-  <form action="">
-    <label for="Email">
-      Email:
-      <input type="text" />
-    </label>
-    <button>Subscribe</button>
-  </form>
+
 </main>
 <footer>
-  <div class="accordion">
+  <div class="accordion footerNav">
     <details>
       <summary>Kontakt</summary>
       <div class="content">
-        <p>Mejla oss på info@spar.se</p>
+        <p><a href="">Kundtjänst</a></p>
+        <p><a href="">Chatta med oss</a></p>
+        <p><a href="">Hitta butik</a></p>
+        <p><a href="">Vanliga frågor</a></p>
+        <p><a href="mailto:spar@fashion.com">spar@fashion.com</a></p>
       </div>
     </details>
 
     <details>
       <summary>Om oss</summary>
       <div class="content">
-        <p>Text om företaget.</p>
+        <p><a href="">Vår historia</a></p>
+        <p><a href="">Hållbarhet</a></p>
+        <p><a href="">Material &amp; teknik</a></p>
       </div>
     </details>
 
     <details>
-      <summary>Kundservice</summary>
+      <summary>Tjänster</summary>
       <div class="content">
-        <p>Frågor om köp, retur och leverans.</p>
+        <p><a href="">Frakt &amp; leverans</a></p>
+        <p><a href="">Returer &amp; byten</a></p>
+        <p><a href="">Garanti &amp; reparation</a></p>
+        <p><a href="">Storleksguide</a></p>
+        <p><a href="">Presentkort</a></p>
       </div>
     </details>
+  </div>
+
+  <div class="footerLang">
+    <a href="#">Svenska</a> | <a href="#">Engelska</a>
   </div>
 </footer>
 </body>
