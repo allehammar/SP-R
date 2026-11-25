@@ -54,3 +54,38 @@ window.addEventListener("scroll", updateHeader);
 //when the page is loaded for the first time I call on the function so see the correct state,
 // for example is the page is at the top the logo remains as it should, and if the page reloads when a user has scrolled down past the header it gets the right styling.
 updateHeader();
+
+//Shoe change color, a sort of configurator.
+//constant variable that targets the html id.
+const selectedShoe = document.querySelector("#selectedShoe");
+
+//constant variable that targets the html class.
+const shoeColorButtons = document.querySelectorAll(
+  ".productChoiceColor button",
+);
+
+//when the user clicks a color/button the foreach loop runs and goes through the buttons.
+shoeColorButtons.forEach((button) => {
+  //adds a eventlistnener to when the user clicks one the the three buttons the code iside run.
+  button.addEventListener("click", () => {
+    //constant variable that sets the value where the selected choice is drawn from data-image in html where the img path is stored.
+    const newImage = button.dataset.image;
+
+    //changes the img to a new img/shoe.
+    selectedShoe.src = newImage;
+
+    //update the description if the img is not shown/the alt in html.
+    selectedShoe.alt = button.dataset.alt;
+
+    //Here we remove the active state by classlist remove and aria-pressed to false that both targets the html, and more row efficient with a foreach.
+    shoeColorButtons.forEach((colorButton) => {
+      colorButton.classList.remove("active");
+
+      colorButton.setAttribute("aria-pressed", "false");
+    });
+
+    //add the active class from html and the aria-pressed to true so the one that the user selected is selected and presented.
+    button.classList.add("active");
+    button.setAttribute("aria-pressed", "true");
+  });
+});
