@@ -1,14 +1,3 @@
-/*
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-*/
-
-/* Lagt in variabler tillsvidare innan vi har knytit ihop css filerna */
 :root {
   --base-colorOne: #fafafa;
   --base-colorTwo: #dfdede;
@@ -146,16 +135,6 @@ h3 {
 }
 
 .logo {
-  /*display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 343px;
-  height: 62px;
-  font-size: 48px;
-  font-weight: 200;
-  color: var(--base-colorOne);
-  text-decoration: none;*/
   display: block;
   max-width: 100%;
   width: 260px;
@@ -291,7 +270,6 @@ h3 {
 }
 
 .heros {
-  /*min-height: 350px;*/
   min-height: 100vh;
   margin-top: -180px;
   background-color: var(--base-colorThree);
@@ -471,9 +449,7 @@ h3 {
   text-decoration: none;
   color: var(--base-colorSix);
 }
-/*--------------------------
-GreyboxThree                  
-----------------------------*/
+
 .sustainabilities {
   padding: var(--space-ss);
   background-color: var(--base-colorThree);
@@ -756,6 +732,8 @@ GreyboxThree
   background-color: var(--base-colorOne);
   border: none;
   border-radius: 8px;
+}
+
 .productSelectColor {
   display: flex;
   margin-top: 4px;
@@ -802,18 +780,9 @@ Desktop view
       background-color 0.3s ease;
   }
 
-  /*.siteHeaders.is-hidden {
-    transform: translateY(-100%);
-  }*/
-
   .siteHeaders:hover {
     background-color: var(--base-colorOne);
   }
-
-  /*.siteHeaders:hover .logo {
-    color: var(--base-colorSix);
-    transition: color 0.3s ease-in-out;
-  }*/
 
   .siteHeaders:hover .desktopNavigation a {
     color: var(--base-colorSix);
