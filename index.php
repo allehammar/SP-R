@@ -31,48 +31,91 @@ if (isset($_POST['email'])) {
   <div class="products" id="collection">
     <div class="productList">
       <article class="productCard">
-        <div class="productImage"></div>
+        <div class="productImage">
+          <img src="/assets/Karbinladdare_Svart.png" alt="Karbinladdare">
+        </div>
         <h2>KARBINLADDARE</h2>
       </article>
 
       <article class="productCard">
-        <div class="productImage"></div>
+        <div class="productImage">
+          <img src="/assets/Sko_1_huvudbild_3840_2160.png" alt="Sko">
+        </div>
         <h2>SKOR</h2>
+        <div class="productSelectColor">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </article>
 
       <article class="productCard">
-        <div class="productImage"></div>
+        <div class="productImage">
+          <img src="/assets/Flaska_1_huvudbild_3840_2160.png" alt="Vattenflaska">
+        </div>
         <h2>VATTENFLASKA</h2>
+        <div class="productSelectColor">
+          <span></span>
+          <span></span>
+        </div>
       </article>
 
       <article class="productCard">
-        <div class="productImage"></div>
+        <div class="productImage">
+          <img src="/assets/hoodie_Eucalyptus_45_3840x2160.png" alt="Hoodie">
+        </div>
         <h2>HOODIE</h2>
+        <div class="productSelectColor">
+          <span></span>
+          <span></span>
+        </div>
       </article>
 
       <article class="productCard">
-        <div class="productImage"></div>
+        <div class="productImage">
+          <img src="/assets/jacka_eucalyptus_45_3840x2160.png" alt="Jacka">
+        </div>
         <h2>JACKA</h2>
+        <div class="productSelectColor">
+          <span></span>
+          <span></span>
+        </div>
       </article>
 
       <article class="productCard">
-        <div class="productImage"></div>
+        <div class="productImage">
+          <img src="/assets/Brillor_1_helbild_3840_2160.png" alt="Solglasögon">
+        </div>
         <h2>SOLGLASÖGON</h2>
       </article>
 
       <article class="productCard">
-        <div class="productImage"></div>
+        <div class="productImage">
+          <img src="/assets/klocka_vinkel_3840x2160.png" alt="Digital klocka">
+        </div>
         <h2>DIGITAL KLOCKA</h2>
       </article>
 
       <article class="productCard">
-        <div class="productImage"></div>
+        <div class="productImage">
+          <img src="/assets/vantar_vinkelpng.png" alt="Handskar">
+        </div>
         <h2>HANDSKAR</h2>
       </article>
 
       <article class="productCard">
-        <div class="productImage"></div>
+        <div class="productImage">
+          <img src="/assets/Mössa_Blå.png" alt="Mössa">
+        </div>
         <h2>MÖSSA</h2>
+      </article>
+
+      <article class="productCard">
+        <div class="productImage">
+          <img src="/assets/Ryggsäck_Blå_45grader.png" alt="Ryggsäck">
+        </div>
+        <h2>RYGGSÄCK</h2>
+      </article>
     </div>
   </div>
 
@@ -148,7 +191,7 @@ if (isset($_POST['email'])) {
 
     <div class="configuratorTools">
       <div class="configurator3D">
-
+        <img src="/assets/Sko_2_sida_3840_2160-2.png" alt="Sko" id="selectedShoe">
       </div>
 
       <div class="configuratorChoices">
@@ -159,17 +202,33 @@ if (isset($_POST['email'])) {
         </div>
 
         <div class="productChoiceColor">
-          <div class="colorOne">
 
-          </div>
+          <button
+            type="button"
+            class="colorOne active"
+            data-image="/assets/Sko_2_sida_3840_2160-2.png"
+            data-alt="Sko"
+            aria-label="Visa sko"
+            aria-pressed="true">
+          </button>
 
-          <div class="colorTwo">
+          <button
+            type="button"
+            class="colorTwo active"
+            data-image="/assets/Sko_2_sida_3840_21601.png"
+            data-alt="Sko"
+            aria-label="Visa sko"
+            aria-pressed="false">
+          </button>
 
-          </div>
-
-          <div class="colorThree">
-
-          </div>
+          <button
+            type="button"
+            class="colorThree active"
+            data-image="/assets/Sko_2_sida_3840_2160.png"
+            data-alt="Sko"
+            aria-label="Visa sko"
+            aria-pressed="false">
+          </button>
         </div>
       </div>
     </div>

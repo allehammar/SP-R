@@ -4,4 +4,4 @@
 
 #### SPÅR is a website that shows a landingpage to a sustainable cloth collection sellersite.
 
-#### This project is made my Mattias Holgersson, Philip Kareld, and more from WU26.
+#### This project is made my Mattias Holgersson and Philip Kareld from webdevelopers, William Bai, Liv Nordkvist, Jonas Quant from digital design, Frida Nordin, Therese Södervall, Jonatan Alexandersson from computer graphics.

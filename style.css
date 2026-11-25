@@ -133,6 +133,9 @@ h3 {
 .siteHeaders {
   padding: var(--space-ss);
   background-color: var(--base-colorThree);
+  background-color: transparent;
+  position: relative;
+  z-index: 100;
 }
 
 .siteHeader {
@@ -172,6 +175,10 @@ h3 {
   margin-top: var(--space-ss);
 }
 
+.headerIcons svg {
+  color: var(--base-colorOne);
+}
+
 .headerAction {
   display: flex;
   align-items: center;
@@ -201,9 +208,11 @@ h3 {
   width: var(--space-md);
   height: var(--space-md);
   display: block;
+  filter: brightness(0) invert(1);
   transition:
     height 0.3s ease,
-    width 0.3s ease;
+    width 0.3s ease,
+    filter 0.3s ease;
 }
 .cardUtvecklatFörDig h3 {
   margin-top: 32px;
@@ -282,13 +291,15 @@ h3 {
 }
 
 .heros {
-  min-height: 350px;
+  /*min-height: 350px;*/
+  min-height: 100vh;
+  margin-top: -180px;
   background-color: var(--base-colorThree);
   display: flex;
   justify-content: center;
   align-items: flex-end;
   padding: var(--space-md);
-  background-image: url("/assets/hero.png");
+  background-image: url("/assets/01-hero-glasogon-mobil-v3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -317,6 +328,14 @@ h3 {
   width: 100%;
   aspect-ratio: 1;
   background-color: #cfcfcf;
+  overflow: hidden;
+}
+
+.productImage img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .productCard {
@@ -349,6 +368,11 @@ h3 {
   line-height: 1.2;
   font-weight: 500;
   text-align: center;
+  color: var(--base-colorOne);
+}
+
+.hero a {
+  color: var(--base-colorOne);
 }
 
 .desktopNavigation {
@@ -455,6 +479,10 @@ GreyboxThree
   background-color: var(--base-colorThree);
   text-align: center;
   color: var(--base-colorOne);
+  background-image: url(/assets/BILD-07-hallbarhet-bakgrund_2880x874-2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .sustainabilities a {
@@ -473,9 +501,6 @@ GreyboxThree
   align-items: center;
 }
 
-/*--------------------------
-GreyboxFive                  
-----------------------------*/
 .configurators {
   width: 100%;
   padding: var(--space-ss);
@@ -497,7 +522,7 @@ GreyboxFive
 
 .configuratorInfoDescription h3 {
   font-weight: 400;
-  font-size: 18px;
+  font-size: var(--font-size-h2);
   line-height: 1.4;
   margin: 0;
 }
@@ -518,9 +543,19 @@ GreyboxFive
 }
 
 .configurator3D {
-  min-height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+  overflow: hidden;
+}
+
+.configurator3D img {
+  display: block;
+  object-fit: cover;
   width: 100%;
-  background-color: var(--base-colorTwo);
+  height: 100%;
+  max-height: none;
 }
 
 .configuratorChoices {
@@ -538,6 +573,16 @@ GreyboxFive
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+.productChoiceColor button {
+  padding: 0;
+  cursor: pointer;
+}
+
+.productChoiceColor button.active {
+  outline: 1px solid var(--base-colorSix);
+  outline-offset: 3px;
 }
 
 .colorOne,
@@ -711,6 +756,19 @@ GreyboxFive
   background-color: var(--base-colorOne);
   border: none;
   border-radius: 8px;
+.productSelectColor {
+  display: flex;
+  margin-top: 4px;
+  margin-bottom: 6px;
+  gap: 4px;
+}
+
+.productSelectColor span {
+  display: block;
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  background-color: var(--base-colorThree);
 }
 
 /* Tablet view */
@@ -731,32 +789,31 @@ GreyboxFive
 Desktop view 
 ==========================*/
 @media (min-width: 1024px) {
-  /*--------------------------
-  GreyboxOne                 
-  ----------------------------*/
   .siteHeaders {
     display: block;
     width: 100%;
     padding: 24px 32px 16px;
-    /*position: sticky;*/
-    position: fixed;
+    position: sticky;
     top: 0;
-    right: 0;
-    left: 0;
     z-index: 100;
+    background-color: transparent;
     transition:
       padding 0.3s ease,
       background-color 0.3s ease;
   }
 
+  /*.siteHeaders.is-hidden {
+    transform: translateY(-100%);
+  }*/
+
   .siteHeaders:hover {
     background-color: var(--base-colorOne);
   }
 
-  .siteHeaders:hover .logo {
+  /*.siteHeaders:hover .logo {
     color: var(--base-colorSix);
     transition: color 0.3s ease-in-out;
-  }
+  }*/
 
   .siteHeaders:hover .desktopNavigation a {
     color: var(--base-colorSix);
@@ -879,9 +936,6 @@ Desktop view
     flex-basis: calc((100% - 48px) / 7);
   }
 
-  /*--------------------------
-  GreyboxThree                  
-  ----------------------------*/
   .sustainabilities {
     padding: 64px var(--space-lg);
   }
@@ -897,9 +951,6 @@ Desktop view
     margin-bottom: 48px;
   }
 
-  /*--------------------------
-  GreyboxFive                 
-  ----------------------------*/
   .configurators {
     display: flex;
     flex-direction: row-reverse;
@@ -932,7 +983,11 @@ Desktop view
   }
 
   .configurator3D {
-    min-height: 450px;
+    height: 450px;
+  }
+
+  .configurator3D img {
+    max-height: none;
   }
 
   .megaMenu {
@@ -969,6 +1024,14 @@ Desktop view
     width: 100%;
     aspect-ratio: 2 / 1;
     background-color: var(--base-colorThree);
+    overflow: hidden;
+  }
+
+  .megaMenuImage img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
 
   .megaMenuCard p {
@@ -982,6 +1045,16 @@ Desktop view
   #newsMenu:hover,
   #newsMenu:focus-within {
     display: flex;
+  }
+
+  .siteHeaders:hover .headerIcons img,
+  .siteHeaders:focus-within .headerIcons img,
+  .siteHeaders.scrolling-up .headerIcons img {
+    filter: brightness(0);
+  }
+
+  .headerIcons img {
+    filter: brightness(0) invert(1);
   }
 
   .megaMenuLinkBoxes {
@@ -1065,23 +1138,35 @@ Desktop view
 
   .heros {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
     min-height: 100vh;
-    padding: 24px 24px 8vh;
-    background-position: center;
+    padding: 24px 24px 55vh;
+    background-position: center top;
+    background-size: cover;
+    margin-top: -180px;
+    aspect-ratio: 1440 / 1100;
+    background-image: url(/assets/01-hero-glasogon-komp.png);
   }
 
   .hero {
-    min-height: 100vh;
-    background-position: center;
     text-align: center;
   }
 
-  .hero h1,
+  .hero h1 {
+    color: var(--base-colorOne);
+    font-size: 42px;
+    margin: 0 0 32px;
+  }
+
   .hero a {
     color: var(--base-colorOne);
+    font-size: 20px;
+  }
+
+  #collection {
+    scroll-margin-top: 140px;
   }
 
   .inbjudan {
